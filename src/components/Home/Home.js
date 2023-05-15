@@ -2,8 +2,6 @@ import React from 'react';
 import Header from './Header/Header';
 import Profile from './Profile/Profile';
 import '../Home/Home.css'
-import WebFont from 'webfontloader';
-import { useEffect } from 'react';
 import Footer from './Footer/Footer';
 
 

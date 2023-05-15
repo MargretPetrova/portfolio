@@ -5,7 +5,7 @@ import { TOTAL_SCREENS } from '../../../utilities/screensUtils';
 
 function Header(props) {
     const [selectedScreen, setSelectedScreen] = useState(0);
-    const [showHeaderOptions, setShowHeaderOptions] = useState(false);
+  
   
     const getHeaderOptions = () => {
         return TOTAL_SCREENS.map((Screen, i) => (
@@ -35,7 +35,7 @@ function Header(props) {
         }else{
                 screenComponent.scrollIntoView({ behavior: "smooth" });
                 setSelectedScreen(index);
-                setShowHeaderOptions(false);
+                
             }
     
        

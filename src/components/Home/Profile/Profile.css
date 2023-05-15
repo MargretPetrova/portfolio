@@ -177,22 +177,8 @@
   .colz {
     color: red;
   }
-  .colz .colz-icon i {
-    color: white;
-    padding: 8px;
-    padding-left: 0px;
-  }
-  .colz .colz-icon i:hover {
-    transform: scale(1.5);
-  }
-  @media only screen and (max-width: 800px) {
-    .colz .colz-icon i {
-      background-color: lightblue;
-      padding: 0px;
-      display: none;
-    }
-  }
 
+ 
   
   .profile-role-tagline {
     opacity: 0.9;
