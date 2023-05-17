@@ -109,7 +109,6 @@ const Resume = (props) => {
       </div>
     );
   };
-
   return (
     <div
       className="resume container screen-container fade-in"
