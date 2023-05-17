@@ -1,21 +1,16 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    /* min-height: 670px; */
-    background-color: rgb(179, 79, 79);
-    /* background-image: url("../../assets/bg.jpg"); */
-   
-  }
-  .btn{
-    font-family:'Chilanka';
-    margin: 0 0 0 28px;
-    padding: 11px 2px;
-    width: 100px;
-    background-color: #dbb1b1;
-    /* border-radius: 12% solid white; */
-  }
-  .btn:hover{
-cursor: pointer;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(179, 79, 79);
+}
+.btn {
+  font-family: "Chilanka";
+  margin: 0 0 0 28px;
+  padding: 11px 2px;
+  width: 100px;
+  background-color: #dbb1b1;
+ 
+}
+.btn:hover {
+  cursor: pointer;
+}

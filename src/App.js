@@ -1,8 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import PortfolioContainer from './components/PortfolioContainer/PortfolioContainer';
 import WebFont from 'webfontloader';
 import { useEffect } from 'react';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   useEffect(() => {
@@ -14,7 +16,9 @@ function App() {
    }, []);
   return (
     <div className="App">
+        <ToastContainer/>
      <PortfolioContainer/>
+   
     </div>
   );
 }
