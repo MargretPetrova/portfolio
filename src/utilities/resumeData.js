@@ -8,13 +8,13 @@
 
   const programmingSkillsDetails = [
 
-    { skill: "JavaScript", ratingPercentage: 70 },
+    { skill: "JavaScript", ratingPercentage: 90 },
     { skill: "React JS", ratingPercentage: 70 },
     { skill: "Express JS", ratingPercentage: 60 },
     { skill: "Node JS", ratingPercentage: 70 },
     { skill: "Mongo Db", ratingPercentage: 60 },
-    { skill: "HTML", ratingPercentage: 70 },
-    { skill: "CSS", ratingPercentage: 70 },
+    { skill: "HTML", ratingPercentage: 90 },
+    { skill: "CSS", ratingPercentage: 80 },
   ];
 
   const projectsDetails = [
@@ -24,6 +24,7 @@
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place. Deployed",
       subHeading: "Technologies Used: React JS",
+      link:'https://margretpetrova.github.io/portfolio/'
     },
     {
       title: "Real Estate ",
