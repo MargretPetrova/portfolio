@@ -2,6 +2,7 @@ import React from "react";
 import "../Profile/Profile.css";
 import ReactTypingEffect from "react-typing-effect";
 
+
 function Profile(props) {
   const scrollToHireMe = () => {
     let screenComponent = document.getElementById("Contact Me");
@@ -11,7 +12,22 @@ function Profile(props) {
       screenComponent.scrollIntoView({ behavior: "smooth" });
     }
   };
-  return (
+  async function getResumeHandler(){
+    
+    try {
+      const response = await require('../../../../public/')
+      console.log(response)
+      const url = window.URL.createObjectURL(new Blob([response]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'MargretPetrova.pdf');
+      document.body.appendChild(link);
+      link.click();
+    } catch (error) {
+      console.error(error);
+    }
+  }
+   return (
     <div className="profile-container">
       <div className="profile-parent">
         <div className="profile-details">
@@ -45,8 +61,11 @@ function Profile(props) {
             >
               Hire Me
             </button>
-            <a href="MargretResume.pdf" download="MargretResume.pdf">
-              <button className="btn highlighted-btn">Get Resume</button>
+            <a href={`${process.env.PUBLIC_URL}/downloads/MargretPetrova.pdf`} download='MargretPetrova.pdf'>
+
+              <button className="btn highlighted-btn" 
+              // onClick={()=> getResumeHandler()}
+              >Get Resume</button>
             </a>
           </div>
         </div>
@@ -57,5 +76,6 @@ function Profile(props) {
     </div>
   );
 }
+
 
 export default Profile;
