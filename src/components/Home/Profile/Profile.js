@@ -12,21 +12,8 @@ function Profile(props) {
       screenComponent.scrollIntoView({ behavior: "smooth" });
     }
   };
-  async function getResumeHandler(){
-    
-    try {
-      const response = await require('../../../../public/')
-      console.log(response)
-      const url = window.URL.createObjectURL(new Blob([response]));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'MargretPetrova.pdf');
-      document.body.appendChild(link);
-      link.click();
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  
+ 
    return (
     <div className="profile-container">
       <div className="profile-parent">
@@ -64,7 +51,7 @@ function Profile(props) {
             <a href={`${process.env.PUBLIC_URL}/downloads/MargretPetrova.pdf`} download='MargretPetrova.pdf'>
 
               <button className="btn highlighted-btn" 
-              // onClick={()=> getResumeHandler()}
+             
               >Get Resume</button>
             </a>
           </div>
