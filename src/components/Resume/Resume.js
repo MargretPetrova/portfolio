@@ -1,72 +1,21 @@
 import React, { useState } from "react";
 import ScreenHeading from "../ScreenHeading/ScreenHeading";
 import "./Resume.css";
-import {
-  resumeBullets,
-  programmingSkillsDetails,
-  projectsDetails,
-  educationDetails,
-  interestsDetails,
-} from "../../utilities/resumeData.js";
-import { ResumeHeading } from "./ResumeHeading";
+import { resumeBullets } from "../../utilities/resumeData.js";
+import EducationResume from "./EducationResume";
+import SkillsResume from "./SkillsResume";
+import ProjectsResume from "./ProjectsResume";
+import InterestsResume from "./InterestsResume";
+
 const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
 
   const resumeDetails = [
-    /* EDUCATION */
-    <div className="resume-screen-container" key="education">
-      {educationDetails.map((item) => (
-        <ResumeHeading
-          heading={item.heading}
-          subHeading={item.subHeading}
-          fromDate={item.fromDate}
-          toDate={item.toDate}
-        />
-      ))}
-    </div>,
-
-    /* PROGRAMMING SKILLS */
-    <div
-      className="resume-screen-container programming-skills-container"
-      key="programming-skills"
-    >
-      {programmingSkillsDetails.map((skill, index) => (
-        <div className="skill-parent" key={index}>
-          <div className="heading-bullet"></div>
-          <span>{skill.skill}</span>
-          <div className="skill-percentage">
-            <div
-              style={{ width: skill.ratingPercentage + "%" }}
-              className="active-percentage-bar"
-            ></div>
-          </div>
-        </div>
-      ))}
-    </div>,
-    /* PROJECTS */
-    <div className="resume-screen-container" key="projects">
-      {projectsDetails.map((projectsDetails, index) => (
-        <ResumeHeading
-          key={index}
-          heading={projectsDetails.title}
-          subHeading={projectsDetails.subHeading}
-          description={projectsDetails.description}
-          fromDate={projectsDetails.duration.fromDate}
-          toDate={projectsDetails.duration.toDate}
-          link={projectsDetails.link}
-        />
-      ))}
-    </div>,
-    /* Interests */
-    <div className="resume-screen-container" key="interests">
-      {interestsDetails.map((interest) => (
-        <ResumeHeading
-          heading={interest.heading}
-          description={interest.description}
-        />
-      ))}
-    </div>,
+    <EducationResume />,
+    <SkillsResume />,
+    <ProjectsResume />,
+    <InterestsResume />,
   ];
 
   const handleCarousal = (index) => {
