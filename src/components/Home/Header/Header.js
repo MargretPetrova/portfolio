@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Header/Header.css";
+import styles from "../Header/Header.module.css";
 import { TOTAL_SCREENS } from "../../../utilities/screensUtils";
 
 function Header(props) {
@@ -9,25 +9,14 @@ function Header(props) {
     return TOTAL_SCREENS.map((Screen, i) => (
       <div
         key={Screen.screen_name}
-        className={getHeaderOptionsClasses(i)}
+        className={selectedScreen=== i ? styles["selected-header-option"]: styles["header-option"] }
         onClick={() => switchScreen(i, Screen)}
       >
         <span>{Screen.screen_name}</span>
       </div>
     ));
   };
-  const getHeaderOptionsClasses = (index) => {
-    let classes = "header-option ";
-    if (index < TOTAL_SCREENS.length - 1) {
-      classes += "header-option-seperator ";
-    }
-
-    if (selectedScreen === index) {
-      classes += "selected-header-option ";
-    }
-
-    return classes;
-  };
+  
   const switchScreen = (index, screen) => {
     let screenComponent = document.getElementById(screen.screen_name);
     if (!screenComponent) {
@@ -39,12 +28,12 @@ function Header(props) {
   };
 
   return (
-    <div className="header-container">
-      <div className="header-parent">
-        <div className="header-logo">
+    <div className={styles["header-container"]}>
+      <div className={styles["header-parent"]}>
+        <div className={styles["header-logo"]}>
           <span>~Margret~</span>
         </div>
-        <div className="header-options">{getHeaderOptions()}</div>
+        <div className={styles["header-options"]}>{getHeaderOptions()}</div>
       </div>
     </div>
   );

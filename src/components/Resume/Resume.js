@@ -6,6 +6,7 @@ import EducationResume from "./EducationResume";
 import SkillsResume from "./SkillsResume";
 import ProjectsResume from "./ProjectsResume";
 import InterestsResume from "./InterestsResume";
+import MainContainer from "../MainContainer/MainContainer";
 
 const Resume = (props) => {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
@@ -59,10 +60,8 @@ const Resume = (props) => {
     );
   };
   return (
-    <div
-      className="resume container screen-container fade-in"
-      id={props.id || ""}
-    >
+    <MainContainer id={props.id} >
+ 
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
         <div className="resume-card">
@@ -76,7 +75,7 @@ const Resume = (props) => {
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
       </div>
-    </div>
+      </MainContainer>
   );
 };
 

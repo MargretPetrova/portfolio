@@ -1,9 +1,9 @@
 import React from 'react'
-import './Footer.css';
+import styles from './Footer.module.css';
 const Footer = () => {
     return (
-        <div className="footer-container">
-            <div className="footer-parent">
+        <div className={styles["footer-container"]}>
+            <div className={styles["footer-parent"]}>
                 <img src={require('../../../assets/shape-bg.png')} alt="Your Browser doesn't supports SVG"/>
             </div>
         </div>

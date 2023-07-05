@@ -6,6 +6,8 @@ import load1 from "../../../src/assets/load2.gif";
 import ReactTypingEffect from "react-typing-effect";
 import ScreenHeading from "../ScreenHeading/ScreenHeading";
 import "./ContactMe.css";
+import MainContainer from "../MainContainer/MainContainer";
+import SendForm from "../Buttons/SendForm";
 
 const ContactMe = (props) => {
   const form = useRef();
@@ -34,28 +36,32 @@ const ContactMe = (props) => {
           "6EaGpAN2sDH1TnxfT"
         );
 
-        if (res.text === "OK") {
-          setBanner("");
-          toast.success("Your email was successfuly send!");
-          setBool(false);
-
-          setEmail("");
-          setName("");
-          setMessage("");
-        } else {
-          setBanner(res.text);
-          setBool(false);
+        if (res.text != "OK") {
           throw new Error();
-        }
+        } 
+        setBanner("");
+        toast.success("Your email was successfuly send!");
+        setBool(false);
+
+        setEmail("");
+        setName("");
+        setMessage("");
       } catch (err) {
-        toast.error(err.message);
+        setBool(false);
+        setBanner(`Network error`);
+        toast.error(err.text);
         console.log(err);
       }
     }
   };
+//   {
+//     "status": 412,
+//     "text": "Gmail_API: Invalid grant. Please reconnect your Gmail account"
+// }
 
   return (
-    <div className="main container" id={props.id || ""}>
+    <MainContainer  id = {props.id}>
+  
       <ScreenHeading subHeading="Let's Keep In Touch" title="Contact Me" />
       <div className="central-form">
         <div className="col">
@@ -104,9 +110,9 @@ const ContactMe = (props) => {
               value={message}
               name="userMessage"
             />
-
-            <div className="send-btn">
-              <button className="btn primary-btn" type="submit">
+<SendForm bool={bool}></SendForm>
+            {/* <div className="send-btn">
+              <button className="btn" type="submit">
                 Send <i className="fa fa-paper-plane"></i>
                 {bool ? (
                   <b className="load">
@@ -116,11 +122,11 @@ const ContactMe = (props) => {
                   ""
                 )}
               </button>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>
-    </div>
+      </MainContainer>
   );
 };
 

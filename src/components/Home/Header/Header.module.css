@@ -20,11 +20,15 @@
   .header-options {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    gap :1rem;
+    
   }
   .header-option {
     font-size: 16px;
     cursor: pointer;
     font-weight: 600;
+   
   }
   .header-hamburger {
     display: none;
@@ -34,10 +38,7 @@
     height: 20px;
     width: 40px;
   }
-  .header-option-seperator {
-    margin: 0 50px 0 0;
-  
-  }
+
   .selected-header-option {
     color: #3b3331;
   }
@@ -53,10 +54,7 @@
  .header-logo{
     display: none;
  }
- .header-options{
-    display: none;
- }
-   
+ 
     .header-parent {
       width: 100%;
       padding: 0 40px;
@@ -65,11 +63,9 @@
     .header-options {
       display: flex;
       flex-direction: column;
-      position: absolute;
+     
+      gap: 0.2rem;
      
     }
-    .header-option-seperator {
-        margin: 1px;
-      
-      }
+   
 }

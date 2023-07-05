@@ -1,6 +1,8 @@
 import React from "react";
-import "../Profile/Profile.css";
+import styles from "../Profile/Profile.module.css";
 import ReactTypingEffect from "react-typing-effect";
+import HireMe from "../../Buttons/HireMe";
+import GetResume from "../../Buttons/GetResume";
 
 
 function Profile(props) {
@@ -15,16 +17,16 @@ function Profile(props) {
   
  
    return (
-    <div className="profile-container">
-      <div className="profile-parent">
-        <div className="profile-details">
-          <div className="profile-details-name">
-            <span className="primary-text">
-              Hello, I'm <span className="highlighted-text"> Margret</span>
+    <div className={styles["profile-container"]}>
+      <div className={styles["profile-parent"]}>
+        <div className={styles["profile-details"]}>
+          <div className={styles["profile-details-name"]}>
+            <span className={styles["primary-text"]}>
+              Hello, I'm <span className={styles["highlighted-text"]}> Margret</span>
             </span>
           </div>
-          <div className="profile-details-role">
-            <span className="primary-text">
+          <div className={styles["profile-details-role"]}>
+            <span className={styles["primary-text"]}>
               <h1>
                 <ReactTypingEffect
                   text={[
@@ -36,28 +38,18 @@ function Profile(props) {
                 />
               </h1>
             </span>
-            <span className="profile-role-tagline">
+            <span className={styles["profile-role-tagline"]}>
               Knack of building applications with front and back end operations.
             </span>
           </div>
 
-          <div className="profile-options">
-            <button
-              className="btn primary-btn"
-              onClick={() => scrollToHireMe()}
-            >
-              Hire Me
-            </button>
-            <a href={`${process.env.PUBLIC_URL}/downloads/MargretPetrova.pdf`} download='MargretPetrova.pdf'>
-
-              <button className="btn highlighted-btn" 
-             
-              >Get Resume</button>
-            </a>
+          <div className={styles["profile-options"]}>
+            <HireMe scrollToHireMe={scrollToHireMe}></HireMe>
+            <GetResume></GetResume>
           </div>
         </div>
-        <div className="profile-picture">
-          <div className="profile-picture-background"></div>
+        <div className={styles["profile-picture"]}>
+          <div className={styles["profile-picture-background"]}></div>
         </div>
       </div>
     </div>

@@ -1,0 +1,11 @@
+.btn {
+    font-family: "Chilanka";
+    margin: 0 0 0 28px;
+    padding: 11px 2px;
+    width: 100px;
+    background-color: #dbb1b1;
+   
+  }
+  .btn:hover {
+    cursor: pointer;
+  }

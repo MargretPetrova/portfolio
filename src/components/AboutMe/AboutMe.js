@@ -1,37 +1,35 @@
 import React from "react";
-import "./AboutMe.css";
+import styles from "./AboutMe.module.css";
 import ScreenHeading from "../ScreenHeading/ScreenHeading";
 import { SCREEN_CONSTANTS } from "../../utilities/aboutMeData";
+import MainContainer from "../MainContainer/MainContainer";
 
 function AboutMe(props) {
   const renderHighlights = () => {
     return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
-      <div className="highlight" key={i}>
-        <div className="highlight-blob"></div>
+      <div className={styles["highlight"]} key={i}>
+        <div className={styles["highlight-blob"]}></div>
         <span>{value}</span>
       </div>
     ));
   };
 
   return (
-    <div className="about-me container" id={props.id}>
-      <div className="about-content"></div>
+    <MainContainer  id={props.id}>
       <ScreenHeading title="About me" />
-      <div className="about-me-card">
-        <div className="about-me-profile"></div>
-        <div className="about-me-details">
-          <span className="about-me-description">
+      <div className={styles["about-me-card"]}>
+        <div className={styles["about-me-profile"]}></div>
+        <div className={styles["about-me-details"]}>
+          <span className={styles["about-me-description"]}>
             {SCREEN_CONSTANTS.description}
           </span>
-          <div className="about-me-highlights">
-            <div className="highlight-heading">
-              <span>{SCREEN_CONSTANTS.highlights.heading}</span>
-            </div>
+          <div className={styles["about-me-highlights"]}>
+          
             {renderHighlights()}
           </div>
         </div>
       </div>
-    </div>
+      </MainContainer>
   );
 }
 
