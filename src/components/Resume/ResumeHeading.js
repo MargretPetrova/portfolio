@@ -26,4 +26,4 @@ export default function ResumeHeading(props) {
       </div>
     </div>
   );
-}
+};
