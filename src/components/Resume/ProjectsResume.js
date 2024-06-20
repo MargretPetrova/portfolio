@@ -1,6 +1,6 @@
 import React from "react";
 import { projectsDetails } from "../../utilities/resumeData";
-import { ResumeHeading } from "./ResumeHeading";
+import  ResumeHeading  from "./ResumeHeading";
 
 export default function ProjectsResume(props) {
   return (

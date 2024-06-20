@@ -1,5 +1,5 @@
 import React from "react";
-import { ResumeHeading } from "../Resume/ResumeHeading"
+import  ResumeHeading  from "../Resume/ResumeHeading"
 import { workDetails } from "../../utilities/resumeData";
 
 export default function WorkResume(props) {
