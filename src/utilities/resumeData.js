@@ -26,10 +26,10 @@ const projectsDetails = [
     title: "Weather Website",
     duration: { fromDate: "2023", toDate: "2023" },
     description:
-      "Weather website so i can practice a redux store from scratch.",
+      "Weather website so I can practice a redux store from scratch.",
     subHeading:
       "Technologies Used: React, Typescript, Redux, Weather API, bootstrap",
-    link: "https://margretpetrova.github.io/weather/",
+    link: "https://github.com/MargretPetrova/weather/",
   },
   {
     title: "Personal Portfolio Website",
