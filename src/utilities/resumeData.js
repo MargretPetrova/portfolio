@@ -1,5 +1,6 @@
-/* STATIC RESUME DATA */
+
 const resumeBullets = [
+  { label: "Work History", logoSrc: "work-history.svg" },
   { label: "Education", logoSrc: "education.svg" },
   { label: "Programming Skills", logoSrc: "programming-skills.svg" },
   { label: "Projects", logoSrc: "projects.svg" },
