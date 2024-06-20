@@ -4,8 +4,7 @@ import ReactTypingEffect from "react-typing-effect";
 import HireMe from "../../Buttons/HireMe";
 import GetResume from "../../Buttons/GetResume";
 
-
-function Profile(props) {
+export default function Profile(props) {
   const scrollToHireMe = () => {
     let screenComponent = document.getElementById("Contact Me");
     if (!screenComponent) {
@@ -14,15 +13,15 @@ function Profile(props) {
       screenComponent.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
- 
-   return (
+
+  return (
     <div className={styles["profile-container"]}>
       <div className={styles["profile-parent"]}>
         <div className={styles["profile-details"]}>
           <div className={styles["profile-details-name"]}>
             <span className={styles["primary-text"]}>
-              Hello, I'm <span className={styles["highlighted-text"]}> Margret</span>
+              Hello, I'm{" "}
+              <span className={styles["highlighted-text"]}> Margret</span>
             </span>
           </div>
           <div className={styles["profile-details-role"]}>
@@ -55,6 +54,3 @@ function Profile(props) {
     </div>
   );
 }
-
-
-export default Profile;

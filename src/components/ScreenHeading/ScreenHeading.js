@@ -1,7 +1,7 @@
 import React from "react";
 import "./ScreenHeading.css";
 
-const ScreenHeading = (props) => {
+export default function ScreenHeading(props) {
   return (
     <div className="heading-container">
       <div className="screen-heading">
@@ -24,6 +24,4 @@ const ScreenHeading = (props) => {
       </div>
     </div>
   );
-};
-
-export default ScreenHeading;
+}

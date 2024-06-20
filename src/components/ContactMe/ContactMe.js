@@ -2,14 +2,14 @@ import React, { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import imgBack from "../../../src/assets/im4.jpg";
-import load1 from "../../../src/assets/load2.gif";
+
 import ReactTypingEffect from "react-typing-effect";
 import ScreenHeading from "../ScreenHeading/ScreenHeading";
 import "./ContactMe.css";
 import MainContainer from "../MainContainer/MainContainer";
 import SendForm from "../Buttons/SendForm";
 
-const ContactMe = (props) => {
+export default function ContactMe(props) {
   const form = useRef();
 
   const [name, setName] = useState("");
@@ -36,9 +36,9 @@ const ContactMe = (props) => {
           "6EaGpAN2sDH1TnxfT"
         );
 
-        if (res.text != "OK") {
+        if (res.text !== "OK") {
           throw new Error();
-        } 
+        }
         setBanner("");
         toast.success("Your email was successfuly send!");
         setBool(false);
@@ -50,23 +50,16 @@ const ContactMe = (props) => {
         setBool(false);
         setBanner(`Network error`);
         toast.error(err.text);
-        console.log(err);
       }
     }
   };
-//   {
-//     "status": 412,
-//     "text": "Gmail_API: Invalid grant. Please reconnect your Gmail account"
-// }
 
   return (
-    <MainContainer  id = {props.id}>
-  
+    <MainContainer id={props.id}>
       <ScreenHeading subHeading="Let's Keep In Touch" title="Contact Me" />
       <div className="central-form">
         <div className="col">
           <h2 className="title">
-     
             <ReactTypingEffect text={["Get in Touch..."]} />
           </h2>
         </div>
@@ -110,24 +103,10 @@ const ContactMe = (props) => {
               value={message}
               name="userMessage"
             />
-<SendForm bool={bool}></SendForm>
-            {/* <div className="send-btn">
-              <button className="btn" type="submit">
-                Send <i className="fa fa-paper-plane"></i>
-                {bool ? (
-                  <b className="load">
-                    <img src={load1} alt="load1" />
-                  </b>
-                ) : (
-                  ""
-                )}
-              </button>
-            </div> */}
+            <SendForm bool={bool}></SendForm>
           </form>
         </div>
       </div>
-      </MainContainer>
+    </MainContainer>
   );
-};
-
-export default ContactMe;
+}

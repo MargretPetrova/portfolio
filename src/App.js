@@ -1,35 +1,23 @@
+import "./App.css";
+import PortfolioContainer from "./components/PortfolioContainer/PortfolioContainer";
+import WebFont from "webfontloader";
+import { useEffect, useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import './App.css';
-import PortfolioContainer from './components/PortfolioContainer/PortfolioContainer';
-import WebFont from 'webfontloader';
-import { useEffect, useState } from 'react';
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
-
-
-function App() {
-  
-
+export default function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Chilanka']
-      }
+        families: ["Chilanka"],
+      },
     });
-   }, []);
-
+  }, []);
 
   return (
-   
     <div className="App">
-        <ToastContainer/>
-     <PortfolioContainer/>
-   
+      <ToastContainer />
+      <PortfolioContainer />
     </div>
-   
   );
 }
-
-export default App;

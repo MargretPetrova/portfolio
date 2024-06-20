@@ -7,12 +7,14 @@ import SkillsResume from "./SkillsResume";
 import ProjectsResume from "./ProjectsResume";
 import InterestsResume from "./InterestsResume";
 import MainContainer from "../MainContainer/MainContainer";
+import WorkResume from "./WorkResume.js";
 
-const Resume = (props) => {
+export default function Resume (props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOffsetStyle, setCarousalOffsetStyle] = useState({});
 
   const resumeDetails = [
+    <WorkResume />,
     <EducationResume />,
     <SkillsResume />,
     <ProjectsResume />,
@@ -60,8 +62,7 @@ const Resume = (props) => {
     );
   };
   return (
-    <MainContainer id={props.id} >
- 
+    <MainContainer id={props.id}>
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My formal Bio Details"} />
         <div className="resume-card">
@@ -75,8 +76,7 @@ const Resume = (props) => {
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
       </div>
-      </MainContainer>
+    </MainContainer>
   );
 };
 
-export default Resume;

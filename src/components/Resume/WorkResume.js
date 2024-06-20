@@ -1,11 +1,11 @@
 import React from "react";
 import { ResumeHeading } from "./ResumeHeading";
-import { educationDetails } from "../../utilities/resumeData";
+import { workDetails } from "../../utilities/resumeData";
 
-export default function EducationResume(props) {
+export default function WorkResume(props) {
   return (
-    <div className="resume-screen-container" key="education">
-      {educationDetails.map((item) => (
+    <div className="resume-screen-container" key="work">
+      {workDetails.map((item) => (
         <ResumeHeading
           heading={item.heading}
           subHeading={item.subHeading}
@@ -15,4 +15,4 @@ export default function EducationResume(props) {
       ))}
     </div>
   );
-};
+}

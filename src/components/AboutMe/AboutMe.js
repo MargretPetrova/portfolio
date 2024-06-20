@@ -4,7 +4,7 @@ import ScreenHeading from "../ScreenHeading/ScreenHeading";
 import { SCREEN_CONSTANTS } from "../../utilities/aboutMeData";
 import MainContainer from "../MainContainer/MainContainer";
 
-function AboutMe(props) {
+export default function AboutMe(props) {
   const renderHighlights = () => {
     return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
       <div className={styles["highlight"]} key={i}>
@@ -15,7 +15,7 @@ function AboutMe(props) {
   };
 
   return (
-    <MainContainer  id={props.id}>
+    <MainContainer id={props.id}>
       <ScreenHeading title="About me" />
       <div className={styles["about-me-card"]}>
         <div className={styles["about-me-profile"]}></div>
@@ -24,13 +24,10 @@ function AboutMe(props) {
             {SCREEN_CONSTANTS.description}
           </span>
           <div className={styles["about-me-highlights"]}>
-          
             {renderHighlights()}
           </div>
         </div>
       </div>
-      </MainContainer>
+    </MainContainer>
   );
 }
-
-export default AboutMe;
