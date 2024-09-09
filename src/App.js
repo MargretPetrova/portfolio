@@ -1,7 +1,7 @@
 import "./App.css";
 import PortfolioContainer from "./components/PortfolioContainer/PortfolioContainer";
 import WebFont from "webfontloader";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

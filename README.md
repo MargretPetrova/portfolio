@@ -1,3 +1,97 @@
+<h1 align="center">
+Portfolio project
+</h1>
+<h4 align="center">
+2023
+</h4>
+
+ ## Content
+- [Overview](#overview)
+  - [Used Technologies](#user-technologies)
+  - [Architecture](#architecture)
+- [Getting Started with Create React App](#getting-started-with-create-react-app)
+
+# Overview
+A Personal Portfolio website to showcase all my details and projects at one place. Deployed
+
+## Used Technologies
+   - React
+   - EmailJS
+   - bootstrap
+
+## Architecture
+
+```
+── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── assets
+    │   ├── im4.jpg
+    │   ├── load2.gif
+    │   ├── mailimage.png
+    │   ├── me.jpg
+    │   ├── Resume
+    │   │   ├── education.svg
+    │   │   ├── interests.svg
+    │   │   ├── programming-skills.svg
+    │   │   ├── projects.svg
+    │   │   └── work-history.svg
+    │   └── shape-bg.png
+    ├── components
+    │   ├── AboutMe
+    │   │   ├── AboutMe.js
+    │   │   └── AboutMe.module.css
+    │   ├── Buttons
+    │   │   ├── Buttons.module.css
+    │   │   ├── GetResume.js
+    │   │   ├── HireMe.js
+    │   │   └── SendForm.js
+    │   ├── ContactMe
+    │   │   ├── ContactMe.css
+    │   │   └── ContactMe.js
+    │   ├── Home
+    │   │   ├── Footer
+    │   │   │   ├── Footer.js
+    │   │   │   └── Footer.module.css
+    │   │   ├── Header
+    │   │   │   ├── Header.js
+    │   │   │   └── Header.module.css
+    │   │   ├── Home.css
+    │   │   ├── Home.js
+    │   │   └── Profile
+    │   │       ├── Profile.js
+    │   │       └── Profile.module.css
+    │   ├── MainContainer
+    │   │   ├── MainContainer.js
+    │   │   └── MainContainer.module.css
+    │   ├── PortfolioContainer
+    │   │   ├── PortfolioContainer.css
+    │   │   └── PortfolioContainer.js
+    │   ├── Resume
+    │   │   ├── EducationResume.js
+    │   │   ├── InterestsResume.js
+    │   │   ├── ProjectsResume.js
+    │   │   ├── Resume.css
+    │   │   ├── Resume.js
+    │   │   ├── ResumeHeading.js
+    │   │   ├── SkillsResume.js
+    │   │   └── WorkResume.js
+    │   └── ScreenHeading
+    │       ├── ScreenHeading.css
+    │       └── ScreenHeading.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── reportWebVitals.js
+    ├── setupTests.js
+    └── utilities
+        ├── aboutMeData.js
+        ├── resumeData.js
+        └── screensUtils.js
+
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
